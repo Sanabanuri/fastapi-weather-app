@@ -29,10 +29,10 @@
     <script>
         async function getWeather(){
             const city = document.getElementById("city").value;
-            const response = await fetch(`web service link`);
+            const response = await fetch(`http://127.0.0.1:8000/weather/${city}`);
             const data = await response.json();
 
-            document.getElementById("result").innerText = `City: ${data.city}\nTemperature: ${data.temperature} °C\nWeather: ${data.getWeather}`;
+            document.getElementById("result").innerText = `City: ${data.city}\nTemprature: ${data.Temprature} °C\nWeather: ${data.Weather}`;
         }
     </script>
 </body>
