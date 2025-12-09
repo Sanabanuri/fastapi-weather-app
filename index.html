@@ -29,7 +29,7 @@
     <script>
         async function getWeather(){
             const city = document.getElementById("city").value;
-            const response = await fetch(`http://127.0.0.1:8000/weather/${city}`);
+            const response = await fetch(`https://fastapi-weather-app-uqg7.onrender.com`);
             const data = await response.json();
 
             document.getElementById("result").innerText = `City: ${data.city}\nTemprature: ${data.Temprature} °C\nWeather: ${data.Weather}`;
